@@ -49,6 +49,11 @@ header {
     transform: scale(1.1);
 }
 
+nav {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
 nav a {
     font-size: 1.8rem;
     color: #2c3e50;
@@ -67,7 +72,7 @@ nav a.active {
 @media (max-width: 995px) {
     nav {
         position: absolute;
-        display: none;
+        display: flex; /* Mudado para flex para garantir que os itens apareçam */
         top: 0;
         right: 0;
         width: 40%;
@@ -78,14 +83,10 @@ nav a.active {
         background-color: #ecf0f1;
     }
 
-    nav .active {
-        display: block;
-    }
-
     nav a {
-        display: block;
+        display: block; /* Cada link será exibido em bloco */
         font-size: 2rem;
-        margin: 3rem 0;
+        margin: 3rem 0; /* Adiciona espaço entre os links */
     }
 
     nav a:hover,
@@ -107,12 +108,20 @@ section {
     align-items: center;
     gap: 8rem;
     background-color: white;
+    min-height: 100vh; /* Garantindo que a seção ocupe pelo menos 100% da altura da tela */
+    padding: 5rem 5%; /* Ajustando o padding para telas menores */
 }
 
-.home .home-content h1 {
-    font-size: 6rem;
-    font-weight: 700;
-    line-height: 1.3;
+.home .home-content {
+    display: flex;
+    flex-direction: column; /* Mudar para coluna */
+    align-items: center; /* Centraliza os itens */
+    margin-bottom: 3rem; /* Ajuste na margem inferior para criar espaço abaixo do conteúdo */
+}
+
+.home-content h1 {
+    font-size: 5.5rem; /* Ajuste do tamanho do título */
+    margin-bottom: 1rem; /* Espaço abaixo do título */
 }
 
 span {
@@ -131,12 +140,14 @@ span {
 }
 
 .home-img {
+    margin-top: 2rem; /* Adiciona espaço acima da imagem */
     border-radius: 50%;
 }
 
 .home-img img {
     position: relative;
-    width: 32vw;
+    width: 32vw; /* Ocupa 32% da largura da tela */
+    max-width: 400px; /* Limita a largura máxima */
     border-radius: 50%;
     box-shadow: 0 0 25px rgba(44, 62, 80, 0.8);
     cursor: pointer;
@@ -188,4 +199,36 @@ span {
     background-color: #2980b9;
     color: white;
     box-shadow: 0 0 25px rgba(41, 128, 185, 0.8);
+}
+
+/* Adicionando regras responsivas */
+@media (max-width: 600px) {
+    .home-content {
+        text-align: center; /* Centraliza o texto no celular */
+    }
+
+    .home-content h1 {
+        font-size: 4rem; /* Ajusta o tamanho do título */
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem; /* Ajusta o tamanho do subtítulo */
+    }
+
+    .home-content p {
+        font-size: 1.4rem; /* Ajusta o tamanho do parágrafo */
+        padding: 0 1rem; /* Adiciona um padding lateral */
+    }
+
+    .social-icons a {
+        width: 3rem; /* Ajusta o tamanho dos ícones */
+        height: 3rem;
+        font-size: 1.5rem; /* Ajusta o tamanho do ícone */
+    }
+
+    nav a {
+        display: flex; /* Flex para alinhamento no celular */
+        justify-content: center; /* Centraliza os itens */
+        font-size: 1.6rem; /* Ajusta o tamanho dos links no celular */
+    }
 }
