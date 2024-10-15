@@ -122,6 +122,7 @@ section {
 .home-content h1 {
     font-size: 5.5rem; /* Ajuste do tamanho do título */
     margin-bottom: 1rem; /* Espaço abaixo do título */
+    margin-top: 4rem; /* Adicionando margem superior para descer o título */
 }
 
 span {
@@ -208,27 +209,45 @@ span {
     }
 
     .home-content h1 {
-        font-size: 4rem; /* Ajusta o tamanho do título */
-    }
-
-    .home-content h3 {
-        font-size: 2.5rem; /* Ajusta o tamanho do subtítulo */
+        font-size: 4rem; /* Ajusta o tamanho do título para telas menores */
     }
 
     .home-content p {
-        font-size: 1.4rem; /* Ajusta o tamanho do parágrafo */
-        padding: 0 1rem; /* Adiciona um padding lateral */
+        font-size: 1.4rem; /* Ajusta o tamanho do texto para telas menores */
     }
 
     .social-icons a {
-        width: 3rem; /* Ajusta o tamanho dos ícones */
+        width: 3rem; /* Ajusta o tamanho dos ícones sociais para telas menores */
         height: 3rem;
-        font-size: 1.5rem; /* Ajusta o tamanho do ícone */
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte dos ícones sociais */
     }
 
-    nav a {
-        display: flex; /* Flex para alinhamento no celular */
-        justify-content: center; /* Centraliza os itens */
-        font-size: 1.6rem; /* Ajusta o tamanho dos links no celular */
+    .btn {
+        font-size: 1.4rem; /* Ajusta o tamanho do botão para telas menores */
+        padding: 0.8rem 2rem; /* Ajusta o padding do botão */
     }
+}
+
+@media (min-width: 601px) { /* Aplica estilos apenas para telas maiores que 600px */
+    .home-img {
+        margin-top: 4.2rem; /* Ajuste este valor para descer mais a imagem */
+    }
+}
+
+footer {
+    background-color: #2980b9;
+    color: white;
+    padding: 2rem 9%;
+    text-align: center;
+}
+
+.footer-icons a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    color: #ecf0f1;
 }
