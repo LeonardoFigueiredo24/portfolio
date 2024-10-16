@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Portfólio Leonardo</title>
@@ -10,8 +11,27 @@
 <body>
     <header>
         <a href="#" class="logo">Leonardo</a>
+        <nav class="desktop-nav">
+            <a href="#">Início</a>
+            <a href="#">Projetos</a>
+            <a href="#">Habilidades</a>
+            <a href="#">Educação</a>
+            <a href="#">Experiência</a>
+            <a href="#">Contato</a>
+        </nav>
+        <nav class="mobile-nav">
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="dropdown-menu">
+                <a href="#">Início</a>
+                <a href="#">Projetos</a>
+                <a href="#">Habilidades</a>
+                <a href="#">Educação</a>
+                <a href="#">Experiência</a>
+                <a href="#">Contato</a>
+            </div>
+        </nav>
     </header>
-    
+
     <section class="home">
         <div class="home-img">
             <img src="main.jpg" alt="Imagem principal do portfólio">
@@ -19,12 +39,12 @@
         <div class="home-content">
             <h1>Olá, Eu sou <span>Leonardo</span></h1>
             <p>Bem-vindo ao meu portfólio! Sou um desenvolvedor apaixonado por criar soluções inovadoras e eficientes. Explore minhas habilidades e projetos!</p>
-            
+
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/leonardo-moura-083486332?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/leonardo-moura-083486332"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/LeonardoFigueiredo24"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/LeonardoF24593?t=vg5nKAkznRtwjC4wq8pYhw&s=09"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/leonardofig24/profilecard/?igsh=MTJuaDg2ZW5oMzFnOQ%3D%3D"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/LeonardoF24593"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/leonardofig24/"><i class="fab fa-instagram"></i></a>
             </div>
 
             <a href="https://wa.me/5591999810481" class="btn">Contrate-me</a>
@@ -34,12 +54,20 @@
     <footer>
         <div class="footer-icons">
             <a href="#">Início</a>
-            <a href="#">Serviços</a>
+            <a href="#">Projetos</a>
             <a href="#">Habilidades</a>
             <a href="#">Educação</a>
             <a href="#">Experiência</a>
             <a href="#">Contato</a>
         </div>
+        <p>&copy; 2024 Leonardo Figueiredo. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const dropdown = document.querySelector('.dropdown-menu');
+            dropdown.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
