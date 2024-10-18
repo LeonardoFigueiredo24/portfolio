@@ -9,7 +9,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; /* Define 1rem = 10px */
 }
 
 body {
@@ -172,6 +172,69 @@ footer p {
     display: flex; /* Mostra na versão desktop */
 }
 
+/* Estilos para os Projetos */
+.projetos {
+    padding: 5rem 9%;
+    text-align: center;
+    background-color: #f5f7fa;
+}
+
+.projetos h2 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+}
+
+.projetos-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.projeto-item {
+    position: relative;
+    text-align: center;
+}
+
+.thumbnail {
+    width: 50px; /* Ícone pequeno */
+    height: 50px; /* Mantém a proporção quadrada */
+    margin: 0 auto;
+    overflow: hidden; 
+    border-radius: 50%; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.thumbnail img {
+    width: 100%; 
+    height: auto; 
+    transition: transform 0.3s ease; 
+}
+
+.thumbnail:hover img {
+    transform: scale(1.1); 
+}
+
+.projeto-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.projeto-nome {
+    font-size: 1.6rem;
+    color: #34495e;
+    margin-top: 1rem;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .desktop-nav {
@@ -227,5 +290,17 @@ footer p {
     .home-img img {
         width: 50vw;
         max-width: 250px;
+    }
+
+    .projetos-container {
+        justify-content: center;
+    }
+
+    .projeto-item {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column; /* Alinha a imagem e o texto verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
     }
 }
